@@ -16,5 +16,5 @@ todoController(app);
 
 ///listen to port
 let port = process.env.PORT || 8080;
-app.listen(3000);
+app.listen(port);
 console.log('You are listening to port '+port);
