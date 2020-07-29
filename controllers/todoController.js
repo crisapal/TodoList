@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 
 
 //connect database
-mongoose.connect('mongodb://test:test@crisbase-shard-00-00.blcjj.mongodb.net:27017,crisbase-shard-00-01.blcjj.mongodb.net:27017,crisbase-shard-00-02.blcjj.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-c0jfn6-shard-0&authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(process.env.MONGODB_URI||'mongodb://test:test@crisbase-shard-00-00.blcjj.mongodb.net:27017,crisbase-shard-00-01.blcjj.mongodb.net:27017,crisbase-shard-00-02.blcjj.mongodb.net:27017/CrisBase?ssl=true&replicaSet=atlas-c0jfn6-shard-0&authSource=admin&retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err)
        console.error(err);
     else
