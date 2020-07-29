@@ -62,6 +62,7 @@ app.delete('/todo/:item', function(req, res){
 
     Todo.find({item:req.params.item.replace(/\-/g,' ')}).deleteOne(function(err,data){
         if (err) throw err;
+        console.log(data);
         res.json(data);
     })
   
