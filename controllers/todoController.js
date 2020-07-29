@@ -59,10 +59,10 @@ app.delete('/todo/:item', function(req, res){
     //    return replaced !== req.params.item;
     //});
     //res.json(data);
+   
 
-    Todo.find({item:req.params.item.replace(/\-/g,' ')}).deleteOne(function(err,data){
+    Todo.find({item:req.params.item.substr(1).replace(/\-/g,' ')}).deleteOne(function(err,data){
         if (err) throw err;
-        console.log(data);
         res.json(data);
     })
   
