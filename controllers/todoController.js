@@ -26,7 +26,7 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 module.exports = function(app){ 
     //we will pass the server app
 
-app.get('/',function(req,res){
+app.get('/todo',function(req,res){
  res.render('todo',{todos:data}); //we passed data to the view
 
  //get data from database
@@ -38,7 +38,7 @@ app.get('/',function(req,res){
 */
 });
 
-app.post('/',urlencodedParser,function(req,res){
+app.post('/todo/',urlencodedParser,function(req,res){
     const obj = JSON.parse(JSON.stringify(req.body));
 data.push(obj);
 res.json(data);
@@ -52,7 +52,7 @@ var newTodo = Todo(obj).save(function(err,data){
 
 });
 
-app.delete('/:item', function(req, res){
+app.delete('/todo/:item', function(req, res){
 
       data = data.filter(function(todo){
        let replaced= (todo.item).replace(/ /g, '');
