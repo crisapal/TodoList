@@ -1,0 +1,84 @@
+body{
+    background-image: url('/assets/background5.jpg');
+    font-family: 'American Typewriter', serif;
+    color: black;
+    padding: 3%;
+}
+
+#todo-table{
+    position: relative;
+    width: 95%;
+    background:  #F7E7CE;
+    margin: 5% auto;
+    padding: 3%;
+    box-sizing: border-box;
+    -webkit-box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.4);
+}
+
+#todo-table form:after{
+    margin: 0;
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#logo{
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 35%;
+    width: 20%;
+}
+
+input[type="text"]{
+    width: 63%;
+    padding: 3%;
+    background:#FFFFF0;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: black;
+    font-family: 'American Typewriter', serif;
+
+}
+
+button{
+    padding: 3%;
+    width: 30%;
+    float: right;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'American Typewriter', serif;
+
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+li:hover{
+    text-decoration: line-through;
+    background: rgba(0,0,0,0.2);
+}
+
+
+h1{
+text-align: center;
+}
